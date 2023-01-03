@@ -19,5 +19,4 @@ function Header() {
   )
 }
 
-// exemplo 2
 export default Header;
