@@ -1,9 +1,9 @@
 import OpcoesHeader from '../opcoesHeader'
-import Logo from   '../Logo'
+import Logo from '../Logo'
 import IconesHeader from '../IconesHeader'
 import style from 'styled-components'
 
-const HeaderContainer = style.header `
+const HeaderContainer = style.header`
   background-color: #FFF;
   display: flex;
   justify-content: center;
@@ -18,4 +18,6 @@ function Header() {
     </HeaderContainer>
   )
 }
+
+// exemplo
 export default Header;
