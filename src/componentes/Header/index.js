@@ -18,7 +18,4 @@ function Header() {
     </HeaderContainer>
   )
 }
-
-//OLÁ
-
 export default Header;
