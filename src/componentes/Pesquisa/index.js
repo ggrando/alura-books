@@ -25,12 +25,35 @@ font-weight: 500;
 margin-bottom: 40px;
 `
 
+const Resultado = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    p {
+        width: 200px;
+    }
+    img {
+        width: 100px;
+    }
+    &:hover {
+        border: 1px solid white;
+    }
+`
+
+
 function Pesquisa() {
   const [livrosPesquisados, setLivrosPesquisados] = useState([])
+
+
+
   return (
-    <PesquisaContainer>
+    <PesquisaContainer >
       <Titulo>Já sabe por onde começar?</Titulo>
       <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>
+
+
       <Input
         placeholder="Escreva sua próxima leitura"
         onBlur={evento => {
@@ -39,13 +62,16 @@ function Pesquisa() {
           setLivrosPesquisados(resultadoPesquisa)
         }}
       />
-      {livrosPesquisados.map(livro => (
-        <div>
-          <p>{livro.nome}</p>
-          <img src={livro.src} />
-        </div>
-      ))}
-    </PesquisaContainer>
+      {
+
+        livrosPesquisados.map(livro => (
+          < Resultado>
+            <p>{livro.nome}</p>
+            <img src={livro.src} alt={livro.nome} />
+          </Resultado>
+        ))
+      }
+    </PesquisaContainer >
   )
 }
 
